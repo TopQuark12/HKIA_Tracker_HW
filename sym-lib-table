@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name HKIA_Tracker_SYM)(type Legacy)(uri ${KIPRJMOD}/HKIA_Tracker_SYM.lib)(options "")(descr ""))
+)
