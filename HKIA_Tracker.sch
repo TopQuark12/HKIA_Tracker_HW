@@ -116,12 +116,12 @@ $Comp
 L Connector_Generic:Conn_01x03 J1
 U 1 1 60A5B54F
 P 1250 1600
-F 0 "J1" H 1168 1917 50  0000 C CNN
-F 1 "Motor In" H 1168 1826 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 1250 1600 50  0001 C CNN
+F 0 "J1" H 1168 1275 50  0000 C CNN
+F 1 "Motor In" H 1168 1366 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1250 1600 50  0001 C CNN
 F 3 "~" H 1250 1600 50  0001 C CNN
 	1    1250 1600
-	-1   0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	1450 1500 1750 1500
@@ -152,18 +152,6 @@ F 4 "C95841" H 3850 1650 50  0001 C CNN "LCSC"
 F 5 "CL21B106KOQNNNE" H 3850 1650 50  0001 C CNN "SKU"
 	1    3850 1650
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Zener D7
-U 1 1 60A604E8
-P 3000 1650
-F 0 "D7" V 2954 1730 50  0000 L CNN
-F 1 "2V7" V 3045 1730 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-223" H 3000 1650 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/BZV90.pdf" H 3000 1650 50  0001 C CNN
-F 4 "1727-5570-1-ND" V 3000 1650 50  0001 C CNN "DIGI"
-	1    3000 1650
-	0    1    1    0   
 $EndComp
 Wire Wire Line
 	2850 1200 3000 1200
@@ -1559,18 +1547,6 @@ Wire Wire Line
 	4550 7000 4900 7000
 Wire Wire Line
 	4550 6200 4900 6200
-Wire Wire Line
-	5000 5300 5000 5400
-Wire Notes Line
-	4800 5450 5100 5450
-Wire Notes Line
-	5100 5450 5100 5250
-Wire Notes Line
-	5100 5250 4800 5250
-Wire Notes Line
-	4800 5250 4800 5450
-Text Notes 5150 5450 0    50   ~ 0
-ANT
 $Comp
 L power:+BATT #PWR0128
 U 1 1 6115DFF2
@@ -1643,22 +1619,6 @@ F 4 "C25822" H 5000 4700 50  0001 C CNN "LCSC"
 	1    5000 4700
 	0    -1   -1   0   
 $EndComp
-Text Label 4700 5600 0    50   ~ 0
-GPIO12
-Wire Wire Line
-	4550 5600 5000 5600
-Text Label 4700 5700 0    50   ~ 0
-GPIO13
-Wire Wire Line
-	4550 5700 5000 5700
-Text Label 4700 5800 0    50   ~ 0
-GPIO14
-Wire Wire Line
-	4550 5800 5000 5800
-Text Label 4700 5900 0    50   ~ 0
-GPIO15
-Wire Wire Line
-	4550 5900 5000 5900
 $Comp
 L Switch:SW_Push SW2
 U 1 1 613054FA
@@ -1771,61 +1731,6 @@ F 4 "C72043" V 5750 6200 50  0001 C CNN "LCSC"
 	1    5750 6200
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	8100 4500 8600 4500
-$Comp
-L power:+3.3V #PWR0133
-U 1 1 612F56ED
-P 8600 4500
-F 0 "#PWR0133" H 8600 4350 50  0001 C CNN
-F 1 "+3.3V" V 8615 4628 50  0000 L CNN
-F 2 "" H 8600 4500 50  0001 C CNN
-F 3 "" H 8600 4500 50  0001 C CNN
-	1    8600 4500
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8150 5000 8150 5050
-Wire Wire Line
-	8100 5000 8150 5000
-$Comp
-L power:GND #PWR0134
-U 1 1 612E58D3
-P 8150 5050
-F 0 "#PWR0134" H 8150 4800 50  0001 C CNN
-F 1 "GND" H 8155 4877 50  0000 C CNN
-F 2 "" H 8150 5050 50  0001 C CNN
-F 3 "" H 8150 5050 50  0001 C CNN
-	1    8150 5050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x06 J3
-U 1 1 612E3F7A
-P 7900 4700
-F 0 "J3" H 7818 5117 50  0000 C CNN
-F 1 "Conn_01x06" H 7818 5026 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 7900 4700 50  0001 C CNN
-F 3 "~" H 7900 4700 50  0001 C CNN
-	1    7900 4700
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8100 4900 8550 4900
-Text Label 8250 4900 0    50   ~ 0
-GPIO15
-Wire Wire Line
-	8100 4800 8550 4800
-Text Label 8250 4800 0    50   ~ 0
-GPIO14
-Wire Wire Line
-	8100 4700 8550 4700
-Text Label 8250 4700 0    50   ~ 0
-GPIO13
-Wire Wire Line
-	8100 4600 8550 4600
-Text Label 8250 4600 0    50   ~ 0
-GPIO12
 Connection ~ 12200 5100
 $Comp
 L power:GND #PWR0135
@@ -2211,4 +2116,53 @@ Wire Wire Line
 Wire Wire Line
 	10250 6150 10250 5950
 Connection ~ 10250 5950
+$Comp
+L HKIA_Tracker_SYM:D_Zener_BZV90 D7
+U 1 1 61B18AB6
+P 3000 1650
+F 0 "D7" V 2954 1730 50  0000 L CNN
+F 1 "2V7" V 3045 1730 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 3050 1750 50  0001 C CNN
+F 3 "~" H 3000 1650 50  0001 C CNN
+F 4 "1727-5570-1-ND" V 3000 1650 50  0001 C CNN "DIGI"
+	1    3000 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 61B451E0
+P 13750 2100
+F 0 "H1" H 13850 2146 50  0000 L CNN
+F 1 "M3" H 13850 2055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 13750 2100 50  0001 C CNN
+F 3 "~" H 13750 2100 50  0001 C CNN
+	1    13750 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 61B46062
+P 13750 2350
+F 0 "H2" H 13850 2396 50  0000 L CNN
+F 1 "M3" H 13850 2305 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 13750 2350 50  0001 C CNN
+F 3 "~" H 13750 2350 50  0001 C CNN
+	1    13750 2350
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4550 5600
+NoConn ~ 4550 5700
+NoConn ~ 4550 5800
+NoConn ~ 4550 5900
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 61C670EC
+P 5200 5300
+F 0 "J3" H 5280 5292 50  0000 L CNN
+F 1 "NFC_ANT" H 5280 5201 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5200 5300 50  0001 C CNN
+F 3 "~" H 5200 5300 50  0001 C CNN
+	1    5200 5300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
